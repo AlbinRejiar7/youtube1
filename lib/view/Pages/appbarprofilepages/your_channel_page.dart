@@ -27,6 +27,19 @@ class _YourChannelState extends State<YourChannel> {
     Subscription(),
     Librarypage(),
   ];
+  List<String> mythumbnail = [
+    "https://img.freepik.com/free-vector/fashion-vlogger-youtube-thumbnail-template_23-2148708751.jpg?size=626&ext=jpg&ga=GA1.2.1003115401.1692644975&semt=ais",
+    "https://img.freepik.com/free-vector/travel-youtube-thumbnail_23-2148561450.jpg?size=626&ext=jpg&ga=GA1.2.1003115401.1692644975&semt=ais",
+    "https://img.freepik.com/premium-vector/abstract-business-youtube-thumbnail_23-2148918587.jpg?size=626&ext=jpg&ga=GA1.2.1003115401.1692644975&semt=ais",
+    "https://img.freepik.com/free-vector/modern-youtube-thumbnail-with-comic-art-background_1361-2738.jpg?size=626&ext=jpg&ga=GA1.2.1003115401.1692644975&semt=ais",
+    "https://img.freepik.com/premium-psd/youtube-thumbnail-web-banner-template-review-any-products_633645-89.jpg?size=626&ext=jpg&ga=GA1.2.1003115401.1692644975&semt=ais",
+    "https://img.freepik.com/free-vector/fashion-vlogger-youtube-thumbnail-template_23-2148708751.jpg?size=626&ext=jpg&ga=GA1.2.1003115401.1692644975&semt=ais",
+    "https://img.freepik.com/free-vector/travel-youtube-thumbnail_23-2148561450.jpg?size=626&ext=jpg&ga=GA1.2.1003115401.1692644975&semt=ais",
+    "https://img.freepik.com/premium-vector/abstract-business-youtube-thumbnail_23-2148918587.jpg?size=626&ext=jpg&ga=GA1.2.1003115401.1692644975&semt=ais",
+    "https://img.freepik.com/free-vector/fashion-vlogger-youtube-thumbnail-template_23-2148708751.jpg?size=626&ext=jpg&ga=GA1.2.1003115401.1692644975&semt=ais",
+    "https://img.freepik.com/free-vector/travel-youtube-thumbnail_23-2148561450.jpg?size=626&ext=jpg&ga=GA1.2.1003115401.1692644975&semt=ais",
+    "https://img.freepik.com/premium-vector/abstract-business-youtube-thumbnail_23-2148918587.jpg?size=626&ext=jpg&ga=GA1.2.1003115401.1692644975&semt=ais",
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -147,13 +160,269 @@ class _YourChannelState extends State<YourChannel> {
                           ),
                         ],
                       ),
-                      Text(
-                        'data',
-                        style: TextStyle(color: Colors.amberAccent),
-                      )
                     ],
                   ),
                 ),
+                Expanded(
+                  child: DefaultTabController(
+                    length: 4,
+                    child: Scaffold(
+                      backgroundColor: darkcolor,
+                      body: Column(
+                        children: [
+                          TabBar(
+                            labelPadding: EdgeInsets.only(
+                                bottom: 10, right: 15, left: 10),
+                            indicatorColor: Colors.white,
+                            isScrollable: true,
+                            labelStyle: TextStyle(
+                                fontSize: 22, fontWeight: FontWeight.bold),
+                            unselectedLabelColor:
+                                Color.fromARGB(255, 204, 203, 203),
+                            labelColor: Colors.white,
+                            tabs: [
+                              Text("Home"),
+                              Text("Playlists"),
+                              Text("Channels"),
+                              Text("About"),
+                            ],
+                          ),
+                          Expanded(
+                            child: TabBarView(
+                              children: [
+                                Column(
+                                  children: [
+                                    Container(
+                                      height: 240,
+                                      width: 300,
+                                      decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                            fit: BoxFit.fill,
+                                            image: AssetImage(
+                                                "assets/images/home_img.png")),
+                                      ),
+                                    ),
+                                    Text(
+                                      'Create a video',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 20,
+                                    ),
+                                    Text(
+                                      'Share it with anyone or everyone.\n   Public videos will appear here.',
+                                      style: TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 17,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(15),
+                                      child: Container(
+                                        height: 40,
+                                        width: 100,
+                                        decoration: BoxDecoration(
+                                            color: Colors.blue,
+                                            borderRadius:
+                                                BorderRadius.circular(200)),
+                                        child: Center(
+                                          child: Text(
+                                            "Create",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 20),
+                                          ),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                //playlist
+                                SingleChildScrollView(
+                                  child: Column(
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Row(
+                                          children: [
+                                            Icon(
+                                              Icons.sort,
+                                              color: Colors.grey,
+                                              size: 30,
+                                            ),
+                                            Text(
+                                              "  Sort by ",
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 20,
+                                              ),
+                                            ),
+                                            Icon(
+                                              Icons.expand_more,
+                                              color: Colors.grey,
+                                              size: 30,
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height:
+                                            MediaQuery.of(context).size.height,
+                                        child: ListView.builder(
+                                            physics:
+                                                NeverScrollableScrollPhysics(),
+                                            itemCount: mythumbnail.length,
+                                            itemBuilder: (context, index) {
+                                              return Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 8.0),
+                                                child: ListTile(
+                                                  leading: Container(
+                                                    height: 350,
+                                                    width: 120,
+                                                    decoration: BoxDecoration(
+                                                        image: DecorationImage(
+                                                          fit: BoxFit.cover,
+                                                          image: NetworkImage(
+                                                              mythumbnail[
+                                                                  index]),
+                                                        ),
+                                                        color: Colors.white,
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(6)),
+                                                  ),
+                                                  title: Text(
+                                                    "Playlist name",
+                                                    style: TextStyle(
+                                                        color: Colors.white,
+                                                        fontSize: 20),
+                                                  ),
+                                                  subtitle: Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Text(
+                                                        "Private",
+                                                        style: TextStyle(
+                                                            color: Colors.grey),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  trailing: Column(
+                                                    children: [
+                                                      Icon(
+                                                        Icons.more_vert,
+                                                        color: Colors.white,
+                                                        size: 18,
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              );
+                                            }),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                //channel
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      height: 300,
+                                      width: 300,
+                                      decoration: BoxDecoration(
+                                          image: DecorationImage(
+                                        image: AssetImage(
+                                            "assets/images/channel.png"),
+                                      )),
+                                    ),
+                                    Text(
+                                      "This channel doesn't feature any other channels.",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                //abt
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Row(
+                                        children: [
+                                          Text(
+                                            "More info",
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 25,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Row(
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Icon(
+                                            Icons.language_outlined,
+                                            color: Colors.grey,
+                                            size: 25,
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Text(
+                                            "http://www.youtube.com\n/@username",
+                                            style: TextStyle(
+                                              color: Colors.blue,
+                                              fontSize: 20,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Icon(
+                                            Icons.info_outline,
+                                            color: Colors.grey,
+                                            size: 30,
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Text(
+                                            "Joined 14-Jun-2016",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 20,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                )
               ],
             ),
       bottomNavigationBar: MyBottomNav(onItemTapped: (index) {
