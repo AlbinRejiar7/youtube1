@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:youtube/view/Pages/main_page.dart';
 
@@ -18,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
         .then((value) => Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => MainPage(),
+              builder: (context) => const MainPage(),
             )));
   }
 

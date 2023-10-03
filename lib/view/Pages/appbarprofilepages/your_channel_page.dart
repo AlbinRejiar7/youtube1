@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:youtube/Widgets/mybottom_navigationbar.dart';
 import 'package:youtube/Widgets/search.dart';
@@ -21,11 +19,11 @@ class _YourChannelState extends State<YourChannel> {
   bool istapped = false;
   int _currindex = 0;
   List bottompages = [
-    Bodyhomepage(),
-    ShortsPage(),
+    const Bodyhomepage(),
+    const ShortsPage(),
     null,
-    Subscription(),
-    Librarypage(),
+    const Subscription(),
+    const Librarypage(),
   ];
   List<String> mythumbnail = [
     "https://img.freepik.com/free-vector/fashion-vlogger-youtube-thumbnail-template_23-2148708751.jpg?size=626&ext=jpg&ga=GA1.2.1003115401.1692644975&semt=ais",
@@ -52,8 +50,8 @@ class _YourChannelState extends State<YourChannel> {
                   automaticallyImplyLeading: true,
                   backgroundColor: Colors.black,
                   actions: [
-                    Icon(Icons.cast),
-                    SizedBox(
+                    const Icon(Icons.cast),
+                    const SizedBox(
                       width: 15,
                     ),
                     IconButton(
@@ -61,15 +59,16 @@ class _YourChannelState extends State<YourChannel> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SearchButt(),
+                              builder: (context) => const SearchButt(),
                             ));
                       },
-                      icon: Icon(Icons.search),
+                      icon: const Icon(Icons.search),
                     ),
-                    IconButton(onPressed: () {}, icon: Icon(Icons.more_vert)),
+                    IconButton(
+                        onPressed: () {}, icon: const Icon(Icons.more_vert)),
                   ],
                   elevation: 0,
-                  title: Text(
+                  title: const Text(
                     'Username',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
@@ -82,40 +81,40 @@ class _YourChannelState extends State<YourChannel> {
                       CircleAvatar(
                         radius: 30,
                         backgroundColor: Colors.green[800],
-                        child: Text(
+                        child: const Text(
                           'A',
                           style: TextStyle(color: Colors.white, fontSize: 30),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
-                      Text(
+                      const Text(
                         'NAME',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 30,
                             fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
-                      Text(
+                      const Text(
                         '@username SubscriberCount VideoCount',
                         style: TextStyle(
                           color: Color.fromARGB(166, 255, 255, 255),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
-                      Text(
+                      const Text(
                         'More about channel >',
                         style: TextStyle(
-                          color: const Color.fromARGB(110, 255, 255, 255),
+                          color: Color.fromARGB(110, 255, 255, 255),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Row(
@@ -136,7 +135,7 @@ class _YourChannelState extends State<YourChannel> {
                               ),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           CircleAvatar(
@@ -147,7 +146,7 @@ class _YourChannelState extends State<YourChannel> {
                               color: lightcolor,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           CircleAvatar(
@@ -170,7 +169,7 @@ class _YourChannelState extends State<YourChannel> {
                       backgroundColor: darkcolor,
                       body: Column(
                         children: [
-                          TabBar(
+                          const TabBar(
                             labelPadding: EdgeInsets.only(
                                 bottom: 10, right: 15, left: 10),
                             indicatorColor: Colors.white,
@@ -195,24 +194,24 @@ class _YourChannelState extends State<YourChannel> {
                                     Container(
                                       height: 240,
                                       width: 300,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         image: DecorationImage(
                                             fit: BoxFit.fill,
                                             image: AssetImage(
                                                 "assets/images/home_img.png")),
                                       ),
                                     ),
-                                    Text(
+                                    const Text(
                                       'Create a video',
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 20,
                                       ),
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 20,
                                     ),
-                                    Text(
+                                    const Text(
                                       'Share it with anyone or everyone.\n   Public videos will appear here.',
                                       style: TextStyle(
                                         color: Colors.grey,
@@ -228,7 +227,7 @@ class _YourChannelState extends State<YourChannel> {
                                             color: Colors.blue,
                                             borderRadius:
                                                 BorderRadius.circular(200)),
-                                        child: Center(
+                                        child: const Center(
                                           child: Text(
                                             "Create",
                                             style: TextStyle(
@@ -244,8 +243,8 @@ class _YourChannelState extends State<YourChannel> {
                                 SingleChildScrollView(
                                   child: Column(
                                     children: [
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
+                                      const Padding(
+                                        padding: EdgeInsets.all(8.0),
                                         child: Row(
                                           children: [
                                             Icon(
@@ -273,7 +272,7 @@ class _YourChannelState extends State<YourChannel> {
                                             MediaQuery.of(context).size.height,
                                         child: ListView.builder(
                                             physics:
-                                                NeverScrollableScrollPhysics(),
+                                                const NeverScrollableScrollPhysics(),
                                             itemCount: mythumbnail.length,
                                             itemBuilder: (context, index) {
                                               return Padding(
@@ -295,13 +294,13 @@ class _YourChannelState extends State<YourChannel> {
                                                             BorderRadius
                                                                 .circular(6)),
                                                   ),
-                                                  title: Text(
+                                                  title: const Text(
                                                     "Playlist name",
                                                     style: TextStyle(
                                                         color: Colors.white,
                                                         fontSize: 20),
                                                   ),
-                                                  subtitle: Column(
+                                                  subtitle: const Column(
                                                     crossAxisAlignment:
                                                         CrossAxisAlignment
                                                             .start,
@@ -313,7 +312,7 @@ class _YourChannelState extends State<YourChannel> {
                                                       ),
                                                     ],
                                                   ),
-                                                  trailing: Column(
+                                                  trailing: const Column(
                                                     children: [
                                                       Icon(
                                                         Icons.more_vert,
@@ -336,13 +335,13 @@ class _YourChannelState extends State<YourChannel> {
                                     Container(
                                       height: 300,
                                       width: 300,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                           image: DecorationImage(
                                         image: AssetImage(
                                             "assets/images/channel.png"),
                                       )),
                                     ),
-                                    Text(
+                                    const Text(
                                       "This channel doesn't feature any other channels.",
                                       style: TextStyle(
                                         color: Colors.white,
@@ -352,11 +351,11 @@ class _YourChannelState extends State<YourChannel> {
                                   ],
                                 ),
                                 //abt
-                                Column(
+                                const Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsets.all(8.0),
+                                      padding: EdgeInsets.all(8.0),
                                       child: Row(
                                         children: [
                                           Text(
@@ -372,7 +371,7 @@ class _YourChannelState extends State<YourChannel> {
                                     Row(
                                       children: [
                                         Padding(
-                                          padding: const EdgeInsets.all(8.0),
+                                          padding: EdgeInsets.all(8.0),
                                           child: Icon(
                                             Icons.language_outlined,
                                             color: Colors.grey,
@@ -380,7 +379,7 @@ class _YourChannelState extends State<YourChannel> {
                                           ),
                                         ),
                                         Padding(
-                                          padding: const EdgeInsets.all(8.0),
+                                          padding: EdgeInsets.all(8.0),
                                           child: Text(
                                             "http://www.youtube.com\n/@username",
                                             style: TextStyle(
@@ -394,7 +393,7 @@ class _YourChannelState extends State<YourChannel> {
                                     Row(
                                       children: [
                                         Padding(
-                                          padding: const EdgeInsets.all(8.0),
+                                          padding: EdgeInsets.all(8.0),
                                           child: Icon(
                                             Icons.info_outline,
                                             color: Colors.grey,
@@ -402,7 +401,7 @@ class _YourChannelState extends State<YourChannel> {
                                           ),
                                         ),
                                         Padding(
-                                          padding: const EdgeInsets.all(8.0),
+                                          padding: EdgeInsets.all(8.0),
                                           child: Text(
                                             "Joined 14-Jun-2016",
                                             style: TextStyle(

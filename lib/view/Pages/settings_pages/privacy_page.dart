@@ -27,11 +27,11 @@ class _PrivacyState extends State<Privacy> {
           return ListTile(
             title: Text(
               titleText[index],
-              style: TextStyle(color: Colors.white, fontSize: 20),
+              style: const TextStyle(color: Colors.white, fontSize: 20),
             ),
             subtitle: Text(
               subtitleText[index],
-              style: TextStyle(color: Colors.grey, fontSize: 15),
+              style: const TextStyle(color: Colors.grey, fontSize: 15),
             ),
           );
         });

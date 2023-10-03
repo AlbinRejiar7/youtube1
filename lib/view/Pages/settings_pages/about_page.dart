@@ -35,11 +35,11 @@ class _AboutState extends State<About> {
           return ListTile(
             title: Text(
               titleText[index],
-              style: TextStyle(color: Colors.white, fontSize: 20),
+              style: const TextStyle(color: Colors.white, fontSize: 20),
             ),
             subtitle: Text(
               subtitleText[index],
-              style: TextStyle(color: Colors.grey),
+              style: const TextStyle(color: Colors.grey),
             ),
           );
         });

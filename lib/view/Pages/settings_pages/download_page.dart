@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 
 class DownloadPage extends StatefulWidget {
@@ -33,7 +31,7 @@ class _DownloadPageState extends State<DownloadPage> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Row(
+          const Row(
             children: [
               Text(
                 "Download",
@@ -53,14 +51,14 @@ class _DownloadPageState extends State<DownloadPage> {
                     return ListTile(
                         title: Text(
                           titleText[index],
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.white,
                             fontSize: 20,
                           ),
                         ),
                         subtitle: Text(
                           subtitleText[index],
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Color.fromARGB(255, 114, 112, 112),
                             fontSize: 17,
                           ),
@@ -76,17 +74,17 @@ class _DownloadPageState extends State<DownloadPage> {
                                   });
                                 },
                               )
-                            : Text(""));
+                            : const Text(""));
                   }),
             ),
           ),
-          Divider(
+          const Divider(
             color: Colors.grey,
           ),
           Expanded(
             child: Column(
               children: [
-                Row(
+                const Row(
                   children: [
                     Text(
                       'Available storage',
@@ -97,11 +95,11 @@ class _DownloadPageState extends State<DownloadPage> {
                     ),
                   ],
                 ),
-                Divider(
+                const Divider(
                   color: Colors.grey,
                 ),
-                LinearProgressIndicator(
-                  backgroundColor: const Color.fromARGB(255, 218, 216, 216),
+                const LinearProgressIndicator(
+                  backgroundColor: Color.fromARGB(255, 218, 216, 216),
                   value: 0.0475,
                   minHeight: 10,
                 ),
@@ -117,7 +115,7 @@ class _DownloadPageState extends State<DownloadPage> {
                             width: 10,
                             color: Colors.blue,
                           ),
-                          Text(
+                          const Text(
                             ' ${(0.0475 * 100)}MB used',
                             style: TextStyle(
                               color: Colors.white,
@@ -128,7 +126,7 @@ class _DownloadPageState extends State<DownloadPage> {
                       ),
                       Row(
                         children: [
-                          Text(
+                          const Text(
                             '${500 - (0.0475 * 100)} GB free ',
                             style: TextStyle(
                               color: Colors.white,

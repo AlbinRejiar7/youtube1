@@ -43,8 +43,8 @@ class NotificationsPage extends StatelessWidget {
       itemCount: mainText.length,
       itemBuilder: (BuildContext context, int index) {
         return index == 0
-            ? Padding(
-                padding: const EdgeInsets.all(8.0),
+            ? const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: GeneralRow(
                   mainText: 'Mobile notifications',
                   switchButton: false,

@@ -32,7 +32,7 @@ class DataSavingPage extends StatelessWidget {
                   thickness: 10,
                 ),
               )
-            : SizedBox(
+            : const SizedBox(
                 height: 10,
               ),
         itemCount: 12,

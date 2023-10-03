@@ -49,23 +49,23 @@ class _SettingsPageState extends State<SettingsPage> {
     'About',
   ];
   List settinPages = [
-    GeneralPage(),
-    DataSavingPage(),
-    Autoplay(),
-    VideoqualityPage(),
-    DownloadPage(),
-    WatchOnTVPage(),
-    Privacy(),
-    Privacy(),
-    Privacy(),
-    Privacy(),
-    BillingPage(),
-    NotificationsPage(),
-    ConnectedAppPage(),
-    LiveChatPage(),
-    Captions(),
-    Accessibility(),
-    About(),
+    const GeneralPage(),
+    const DataSavingPage(),
+    const Autoplay(),
+    const VideoqualityPage(),
+    const DownloadPage(),
+    const WatchOnTVPage(),
+    const Privacy(),
+    const Privacy(),
+    const Privacy(),
+    const Privacy(),
+    const BillingPage(),
+    const NotificationsPage(),
+    const ConnectedAppPage(),
+    const LiveChatPage(),
+    const Captions(),
+    const Accessibility(),
+    const About(),
   ];
 
   @override
@@ -75,9 +75,9 @@ class _SettingsPageState extends State<SettingsPage> {
       appBar: AppBar(
         actions: index1 == 12
             ? [
-                IconButton(onPressed: () {}, icon: Icon(Icons.cast)),
-                IconButton(onPressed: () {}, icon: Icon(Icons.search)),
-                IconButton(onPressed: () {}, icon: Icon(Icons.more_vert))
+                IconButton(onPressed: () {}, icon: const Icon(Icons.cast)),
+                IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
+                IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert))
               ]
             : [],
         leading: IconButton(
@@ -92,11 +92,11 @@ class _SettingsPageState extends State<SettingsPage> {
                     onTap: () {
                       Navigator.pop(context);
                     },
-                    child: Icon(
+                    child: const Icon(
                       size: 40,
                       Icons.close,
                     ))
-                : Icon(Icons.arrow_back_outlined)),
+                : const Icon(Icons.arrow_back_outlined)),
         backgroundColor: darkcolor,
         elevation: 0,
         title: Text(
@@ -111,7 +111,7 @@ class _SettingsPageState extends State<SettingsPage> {
 
   ListView settingsLIstviewbuilder(List<String> settingName) {
     return ListView.builder(
-      padding: EdgeInsets.only(left: 15),
+      padding: const EdgeInsets.only(left: 15),
       itemCount: settingName.length,
       itemBuilder: (BuildContext context, int index) {
         if (index == 0) {

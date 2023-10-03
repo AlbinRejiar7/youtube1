@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_final_fields
-
 import 'package:flutter/material.dart';
 import 'package:youtube/Widgets/search.dart';
 import 'package:youtube/assets/shortsimages.dart';
@@ -48,16 +46,16 @@ class _ShortsPageState extends State<ShortsPage> {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => SearchButt(),
+                    builder: (context) => const SearchButt(),
                   ));
             },
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
           ),
-          SizedBox(
+          const SizedBox(
             width: 15,
           ),
-          Icon(Icons.camera_alt_outlined),
-          SizedBox(
+          const Icon(Icons.camera_alt_outlined),
+          const SizedBox(
             width: 15,
           ),
           IconButton(
@@ -66,38 +64,40 @@ class _ShortsPageState extends State<ShortsPage> {
                   context: context,
                   builder: (context) {
                     return Container(
-                      padding: EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(10),
                       height: 300,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Morevertbottomsheet(
-                              text: 'Description', myicon: Icon(Icons.notes)),
+                              text: 'Description',
+                              myicon: const Icon(Icons.notes)),
                           Morevertbottomsheet(
                               text: 'Save to play list',
-                              myicon: Icon(Icons.library_add_outlined)),
+                              myicon: const Icon(Icons.library_add_outlined)),
                           Morevertbottomsheet(
-                              text: 'Captions', myicon: Icon(Icons.subtitles)),
+                              text: 'Captions',
+                              myicon: const Icon(Icons.subtitles)),
                           Morevertbottomsheet(
                               text: 'Dont Recomend this channel',
-                              myicon: Icon(Icons.not_interested)),
+                              myicon: const Icon(Icons.not_interested)),
                           Morevertbottomsheet(
                               text: 'Report',
-                              myicon: Icon(Icons.flag_outlined)),
+                              myicon: const Icon(Icons.flag_outlined)),
                           Morevertbottomsheet(
                               text: 'Send Feedback',
-                              myicon: Icon(Icons.feedback_outlined)),
+                              myicon: const Icon(Icons.feedback_outlined)),
                         ],
                       ),
                     );
                   },
                 );
               },
-              icon: Icon(Icons.more_vert)),
+              icon: const Icon(Icons.more_vert)),
         ],
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Text(
+        title: const Text(
           'Shorts',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
@@ -114,7 +114,7 @@ class _ShortsPageState extends State<ShortsPage> {
                 child: YoutubePlayer(
                   controller: YoutubePlayerController(
                     initialVideoId: videoUrl[index],
-                    flags: YoutubePlayerFlags(
+                    flags: const YoutubePlayerFlags(
                       autoPlay: true,
                     ),
                   ),
@@ -130,7 +130,7 @@ class _ShortsPageState extends State<ShortsPage> {
                         height: MediaQuery.of(context).size.height * 0.5,
                         width: MediaQuery.of(context).size.width * 0.15,
                         child: ListView.builder(
-                          physics: NeverScrollableScrollPhysics(),
+                          physics: const NeverScrollableScrollPhysics(),
                           itemCount: 5,
                           itemBuilder: (BuildContext context, int index) {
                             return Padding(
@@ -144,7 +144,7 @@ class _ShortsPageState extends State<ShortsPage> {
                                   ),
                                   Text(
                                     '${myiconsstring[index]}',
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: Colors.white,
                                     ),
                                   ),
@@ -160,24 +160,24 @@ class _ShortsPageState extends State<ShortsPage> {
                     children: [
                       Row(
                         children: [
-                          CircleAvatar(
+                          const CircleAvatar(
                             radius: 25,
                           ),
-                          Text(
+                          const Text(
                             '@username',
                             style: TextStyle(color: Colors.white, fontSize: 20),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Container(
                             height: 25,
                             width: 90,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                                 color: Colors.red,
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(3))),
-                            child: Center(
+                            child: const Center(
                               child: Text(
                                 'Subscribe',
                                 style: TextStyle(
@@ -190,7 +190,7 @@ class _ShortsPageState extends State<ShortsPage> {
                             child: Container(
                               height: 40,
                               width: 40,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                   color: Colors.greenAccent,
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(3))),
@@ -198,8 +198,8 @@ class _ShortsPageState extends State<ShortsPage> {
                           )
                         ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 6),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 6),
                         child: Row(
                           children: [
                             Text(
@@ -237,7 +237,7 @@ class Morevertbottomsheet extends StatelessWidget {
     return Row(
       children: [
         myicon,
-        SizedBox(
+        const SizedBox(
           width: 30,
         ),
         Text('$text'),

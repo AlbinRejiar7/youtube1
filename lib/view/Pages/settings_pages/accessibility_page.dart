@@ -26,11 +26,11 @@ class _AccessibilityState extends State<Accessibility> {
           return ListTile(
             title: Text(
               titleText[index],
-              style: TextStyle(color: Colors.white, fontSize: 20),
+              style: const TextStyle(color: Colors.white, fontSize: 20),
             ),
             subtitle: Text(
               subtitleText[index],
-              style: TextStyle(color: Colors.grey),
+              style: const TextStyle(color: Colors.grey),
             ),
             trailing: index == 0
                 ? Switch(
@@ -43,7 +43,7 @@ class _AccessibilityState extends State<Accessibility> {
                       });
                     },
                   )
-                : Text(""),
+                : const Text(""),
           );
         });
   }

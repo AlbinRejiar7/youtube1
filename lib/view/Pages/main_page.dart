@@ -6,8 +6,6 @@ import 'package:youtube/view/Pages/bottomnavigationpages/library_page.dart';
 import 'package:youtube/view/Pages/bottomnavigationpages/shorts_page.dart';
 import 'package:youtube/view/Pages/bottomnavigationpages/subscription_page.dart';
 
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables,
-
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
 
@@ -19,17 +17,17 @@ class _MainPageState extends State<MainPage> {
   int _currindex = 0;
 
   List bottompages = [
-    Bodyhomepage(),
-    ShortsPage(),
-    null,
-    Subscription(),
-    Librarypage(),
+    const Bodyhomepage(),
+    const ShortsPage(),
+    const Placeholder(),
+    const Subscription(),
+    const Librarypage(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Mydrawer(),
+      drawer: const Mydrawer(),
       backgroundColor: Colors.black,
       body: bottompages[_currindex],
       bottomNavigationBar: MyBottomNav(

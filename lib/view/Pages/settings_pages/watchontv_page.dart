@@ -17,9 +17,9 @@ class _WatchOnTVPageState extends State<WatchOnTVPage> {
         Container(
           width: double.infinity,
           height: 100,
-          color: Color.fromARGB(255, 252, 29, 13),
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
+          color: const Color.fromARGB(255, 252, 29, 13),
+          child: const Padding(
+            padding: EdgeInsets.all(8.0),
             child: Text(
               "Connect to the same Wi_Fi network as your TV",
               style: TextStyle(
@@ -34,8 +34,8 @@ class _WatchOnTVPageState extends State<WatchOnTVPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Text(
                   "No TVs found",
                   style: TextStyle(
@@ -44,8 +44,8 @@ class _WatchOnTVPageState extends State<WatchOnTVPage> {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Text(
                   "Check your phone settings and try again. If that doesn't work, you can also link your TV and phone using a TV code.",
                   style: TextStyle(
@@ -56,17 +56,17 @@ class _WatchOnTVPageState extends State<WatchOnTVPage> {
               ),
               TextButton(
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   "Get help",
                   style: TextStyle(fontSize: 17),
                 ),
               ),
-              Divider(
+              const Divider(
                 thickness: 1,
                 color: Colors.white,
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Text(
                   "Link with TV code",
                   style: TextStyle(
@@ -75,8 +75,8 @@ class _WatchOnTVPageState extends State<WatchOnTVPage> {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Text(
                   "Another way of connecting devices. Learn how to get a code from your TV to enter here.",
                   style: TextStyle(
@@ -87,17 +87,17 @@ class _WatchOnTVPageState extends State<WatchOnTVPage> {
               ),
               TextButton(
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   "Enter TV code",
                   style: TextStyle(fontSize: 17),
                 ),
               ),
-              Divider(
+              const Divider(
                 thickness: 1,
                 color: Colors.white,
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Text(
                   "Can't find your TV?",
                   style: TextStyle(
@@ -106,7 +106,7 @@ class _WatchOnTVPageState extends State<WatchOnTVPage> {
                   ),
                 ),
               ),
-              Divider(
+              const Divider(
                 thickness: 1,
                 color: Colors.white,
               ),

@@ -26,15 +26,15 @@ class HistoryPage extends StatelessWidget {
               decoration: InputDecoration(
                 filled: true,
                 fillColor: youtubegrey,
-                prefixIcon: Icon(Icons.search),
+                prefixIcon: const Icon(Icons.search),
                 prefixIconColor: Colors.grey,
                 hintText: "Search watch history",
-                hintStyle: TextStyle(color: Colors.grey, fontSize: 20),
+                hintStyle: const TextStyle(color: Colors.grey, fontSize: 20),
               ),
               cursorColor: Colors.grey,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 10, top: 20, bottom: 15),
+            const Padding(
+              padding: EdgeInsets.only(left: 10, top: 20, bottom: 15),
               child: Text(
                 "Today",
                 style: TextStyle(
@@ -45,14 +45,14 @@ class HistoryPage extends StatelessWidget {
             ),
             Row(
               children: [
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Image.asset(
                     scale: 5,
                     color: lightcolor,
                     'assets/images/YouTube_Shorts_29-OUTLINED.png'),
-                SizedBox(
+                const SizedBox(
                   width: 15,
                 ),
                 Text('Shorts',
@@ -80,7 +80,7 @@ class HistoryPage extends StatelessWidget {
                       child: Align(
                         alignment: Alignment.bottomLeft,
                         child: Padding(
-                          padding: EdgeInsets.only(left: 10),
+                          padding: const EdgeInsets.only(left: 10),
                           child: Text(
                             'PUBG#1\n5.6M views',
                             style: TextStyle(
@@ -97,7 +97,7 @@ class HistoryPage extends StatelessWidget {
               width: double.infinity,
               child: ListView.builder(
                   shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   itemCount: mythumbnail.length,
                   itemBuilder: (context, index) {
                     return Padding(
@@ -119,13 +119,14 @@ class HistoryPage extends StatelessWidget {
                               padding:
                                   const EdgeInsets.only(right: 5.0, bottom: 5),
                               child: Container(
-                                padding: EdgeInsets.symmetric(horizontal: 1),
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 1),
                                 height: 20,
                                 width: 35,
                                 decoration: BoxDecoration(
                                     color: Colors.black,
                                     borderRadius: BorderRadius.circular(3)),
-                                child: Center(
+                                child: const Center(
                                   child: Text(
                                     "3:29",
                                     style: TextStyle(
@@ -137,11 +138,11 @@ class HistoryPage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        title: Text(
+                        title: const Text(
                           "YouTube Video Caption| YouTube Video Caption | ",
                           style: TextStyle(color: Colors.white),
                         ),
-                        subtitle: Column(
+                        subtitle: const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
@@ -154,7 +155,7 @@ class HistoryPage extends StatelessWidget {
                             ),
                           ],
                         ),
-                        trailing: Column(
+                        trailing: const Column(
                           children: [
                             Icon(
                               Icons.more_vert,

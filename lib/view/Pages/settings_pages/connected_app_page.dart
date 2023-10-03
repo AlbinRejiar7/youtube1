@@ -25,14 +25,14 @@ class ConnectedAppPage extends StatelessWidget {
         itemCount: connAppsText.length,
         itemBuilder: (context, index) {
           return ListTile(
-            leading: CircleAvatar(
+            leading: const CircleAvatar(
                 backgroundImage: NetworkImage(
                     "https://img.freepik.com/free-photo/luminous-metaverse-background_23-2149539960.jpg?size=626&ext=jpg&uid=R115585454&ga=GA1.2.1003115401.1692644975&semt=sph")),
             title: Text(
               connAppsText[index],
-              style: TextStyle(fontSize: 20, color: Colors.white),
+              style: const TextStyle(fontSize: 20, color: Colors.white),
             ),
-            subtitle: Text(
+            subtitle: const Text(
               "Not connected",
               style: TextStyle(fontSize: 15, color: Colors.grey),
             ),

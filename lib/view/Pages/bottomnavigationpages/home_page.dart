@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 import 'package:miniplayer/miniplayer.dart';
 import 'package:youtube/Widgets/drawer.dart';
@@ -58,14 +56,14 @@ class _BodyhomepageState extends State<Bodyhomepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: darkcolor,
-      drawer: Mydrawer(),
+      drawer: const Mydrawer(),
       key: _scaffoldKey,
       body: Stack(
         children: [
           SingleChildScrollView(
             child: Column(
               children: [
-                MyAppbar(),
+                const MyAppbar(),
                 SizedBox(
                   height: 40,
                   width: double.infinity,
@@ -78,7 +76,7 @@ class _BodyhomepageState extends State<Bodyhomepage> {
                             padding: const EdgeInsets.all(5),
                             child: Container(
                               width: 50,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 43, 37, 37),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(3))),
@@ -97,7 +95,8 @@ class _BodyhomepageState extends State<Bodyhomepage> {
                           );
                         } else if (index == text.length - 1) {
                           return TextButton(
-                              onPressed: () {}, child: Text('Send feedback'));
+                              onPressed: () {},
+                              child: const Text('Send feedback'));
                         } else {
                           return GestureDetector(
                             onTap: () {
@@ -109,13 +108,14 @@ class _BodyhomepageState extends State<Bodyhomepage> {
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Container(
-                                padding: EdgeInsets.symmetric(horizontal: 15),
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 15),
                                 decoration: BoxDecoration(
                                     color: buttonPressed && tappedindex == index
                                         ? Colors.white
-                                        : Color(0xff272727),
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(7))),
+                                        : const Color(0xff272727),
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(7))),
                                 child: Center(
                                     child: Text(
                                   text[index],
@@ -131,21 +131,21 @@ class _BodyhomepageState extends State<Bodyhomepage> {
                         }
                       }),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Row(
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Image.asset(
                           scale: 5,
                           color: lightcolor,
                           'assets/images/YouTube_Shorts_29-OUTLINED.png'),
-                      SizedBox(
+                      const SizedBox(
                         width: 15,
                       ),
                       Text('Shorts',
@@ -174,7 +174,7 @@ class _BodyhomepageState extends State<Bodyhomepage> {
                           child: Align(
                             alignment: Alignment.bottomLeft,
                             child: Padding(
-                              padding: EdgeInsets.only(left: 10),
+                              padding: const EdgeInsets.only(left: 10),
                               child: Text(
                                 'PUBG#1\n5.6M views',
                                 style: TextStyle(
@@ -190,8 +190,8 @@ class _BodyhomepageState extends State<Bodyhomepage> {
                 ),
                 ListView.builder(
                   shrinkWrap: true,
-                  padding: EdgeInsets.symmetric(vertical: 10),
-                  physics: NeverScrollableScrollPhysics(),
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  physics: const NeverScrollableScrollPhysics(),
                   itemCount: mythumbnail.length,
                   itemBuilder: (BuildContext context, int index) {
                     return GestureDetector(
@@ -213,12 +213,12 @@ class _BodyhomepageState extends State<Bodyhomepage> {
                                 image: DecorationImage(
                               image: NetworkImage(mythumbnail[index]),
                             )),
-                            child: Align(
+                            child: const Align(
                               alignment: Alignment.bottomLeft,
                             ),
                           ),
                           ListTile(
-                            leading: CircleAvatar(
+                            leading: const CircleAvatar(
                               radius: 25,
                             ),
                             title: Text(
@@ -227,11 +227,10 @@ class _BodyhomepageState extends State<Bodyhomepage> {
                                 color: lightcolor,
                               ),
                             ),
-                            subtitle: Text(
+                            subtitle: const Text(
                               'Channel Name •  views • TIME',
                               style: TextStyle(
-                                  color:
-                                      const Color.fromARGB(111, 255, 255, 255)),
+                                  color: Color.fromARGB(111, 255, 255, 255)),
                             ),
                           ),
                         ],
@@ -288,10 +287,10 @@ class _BodyhomepageState extends State<Bodyhomepage> {
                                           'Video Title goes here',
                                           style: TextStyle(color: lightcolor),
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           height: 5,
                                         ),
-                                        Text(
+                                        const Text(
                                           'Username',
                                           style:
                                               TextStyle(color: Colors.white54),
@@ -319,7 +318,7 @@ class _BodyhomepageState extends State<Bodyhomepage> {
                               ],
                             ),
                           ),
-                          LinearProgressIndicator(
+                          const LinearProgressIndicator(
                             value: 0.4,
                             valueColor: AlwaysStoppedAnimation(Colors.red),
                           )

@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 import 'package:youtube/Widgets/myappbar.dart';
 import 'package:youtube/assets/shortsimages.dart';
@@ -25,7 +23,7 @@ class Subscription extends StatelessWidget {
         headerSliverBuilder: (context, innerBoxIsScrolled) => <Widget>[],
         body: Column(
           children: [
-            MyAppbar(),
+            const MyAppbar(),
             Row(
               children: [
                 Expanded(
@@ -45,7 +43,7 @@ class Subscription extends StatelessWidget {
                                   backgroundImage:
                                       NetworkImage(mythumbnail[index]),
                                 ),
-                                Text(
+                                const Text(
                                   'username',
                                   style: TextStyle(color: Colors.white),
                                 )
@@ -59,7 +57,7 @@ class Subscription extends StatelessWidget {
                   child: Center(
                     child: TextButton(
                       onPressed: () {},
-                      child: Text(
+                      child: const Text(
                         'All',
                       ),
                     ),
@@ -88,16 +86,17 @@ class Subscription extends StatelessWidget {
                               : Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Container(
-                                    padding:
-                                        EdgeInsets.symmetric(horizontal: 15),
-                                    decoration: BoxDecoration(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 15),
+                                    decoration: const BoxDecoration(
                                         color: Color.fromARGB(255, 43, 37, 37),
                                         borderRadius: BorderRadius.all(
                                             Radius.circular(7))),
                                     child: Center(
                                         child: Text(
                                       subStrings[index],
-                                      style: TextStyle(color: Colors.white),
+                                      style:
+                                          const TextStyle(color: Colors.white),
                                     )),
                                   ),
                                 );
@@ -113,7 +112,7 @@ class Subscription extends StatelessWidget {
                   return index == 1
                       ? Column(
                           children: [
-                            Row(
+                            const Row(
                               children: [
                                 Icon(
                                   Icons.bolt,
@@ -143,7 +142,7 @@ class Subscription extends StatelessWidget {
                                               image: myimages[index]),
                                           borderRadius:
                                               BorderRadius.circular(10)),
-                                      child: Align(
+                                      child: const Align(
                                         alignment: Alignment.bottomLeft,
                                         child: Padding(
                                           padding: EdgeInsets.only(left: 10),
@@ -171,7 +170,7 @@ class Subscription extends StatelessWidget {
                                   image:
                                       DecorationImage(image: myimages[index])),
                             ),
-                            ListTile(
+                            const ListTile(
                               trailing: Icon(
                                 Icons.more_vert,
                                 color: Colors.white,
@@ -188,8 +187,7 @@ class Subscription extends StatelessWidget {
                               subtitle: Text(
                                 'Channel Name • views • Posted Time',
                                 style: TextStyle(
-                                  color:
-                                      const Color.fromARGB(99, 255, 255, 255),
+                                  color: Color.fromARGB(99, 255, 255, 255),
                                 ),
                               ),
                             )

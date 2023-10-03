@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:youtube/Widgets/myappbar.dart';
 import 'package:youtube/assets/shortsimages.dart';
@@ -19,19 +17,19 @@ class _LibrarypageState extends State<Librarypage> {
       backgroundColor: Colors.black,
       body: Column(
         children: [
-          MyAppbar(),
+          const MyAppbar(),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: InkWell(
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => HistoryPage(),
+                  builder: (context) => const HistoryPage(),
                 ));
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
+                  const Row(
                     children: [
                       Icon(
                         Icons.history,
@@ -46,7 +44,7 @@ class _LibrarypageState extends State<Librarypage> {
                       ),
                     ],
                   ),
-                  TextButton(onPressed: () {}, child: Text('View all')),
+                  TextButton(onPressed: () {}, child: const Text('View all')),
                 ],
               ),
             ),
@@ -69,20 +67,21 @@ class _LibrarypageState extends State<Librarypage> {
                         decoration: BoxDecoration(
                             image: DecorationImage(
                                 fit: BoxFit.cover, image: myimages[index]),
-                            borderRadius: BorderRadius.all(Radius.circular(5))),
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(5))),
                       ),
                       Row(
                         children: [
                           Text(
                             'video titile$index',
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.white,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 40,
                           ),
-                          Icon(
+                          const Icon(
                             Icons.more_vert,
                             color: Colors.white,
                           ),
@@ -92,8 +91,8 @@ class _LibrarypageState extends State<Librarypage> {
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         'Channel name$index',
-                        style: TextStyle(
-                          color: const Color.fromARGB(132, 255, 255, 255),
+                        style: const TextStyle(
+                          color: Color.fromARGB(132, 255, 255, 255),
                         ),
                       ),
                     ],
@@ -102,7 +101,7 @@ class _LibrarypageState extends State<Librarypage> {
               },
             ),
           ),
-          Divider(color: Colors.white),
+          const Divider(color: Colors.white),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: InkWell(
@@ -110,7 +109,7 @@ class _LibrarypageState extends State<Librarypage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
+                  const Row(
                     children: [
                       Icon(
                         Icons.playlist_play_rounded,
@@ -125,7 +124,7 @@ class _LibrarypageState extends State<Librarypage> {
                       ),
                     ],
                   ),
-                  TextButton(onPressed: () {}, child: Text('View all')),
+                  TextButton(onPressed: () {}, child: const Text('View all')),
                 ],
               ),
             ),
@@ -148,28 +147,29 @@ class _LibrarypageState extends State<Librarypage> {
                         decoration: BoxDecoration(
                             image: DecorationImage(
                                 fit: BoxFit.cover, image: myimages[index]),
-                            borderRadius: BorderRadius.all(Radius.circular(5))),
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(5))),
                       ),
                       Row(
                         children: [
                           Text(
                             index == 0 ? 'Liked Videos' : 'Playlist$index',
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.white,
                             ),
                           ),
-                          Icon(
+                          const Icon(
                             Icons.more_vert,
                             color: Colors.white,
                           ),
                         ],
                       ),
-                      Text(
+                      const Text(
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         'Private',
                         style: TextStyle(
-                          color: const Color.fromARGB(132, 255, 255, 255),
+                          color: Color.fromARGB(132, 255, 255, 255),
                         ),
                       ),
                     ],
@@ -178,14 +178,14 @@ class _LibrarypageState extends State<Librarypage> {
               },
             ),
           ),
-          Divider(
-            color: const Color.fromARGB(136, 255, 255, 255),
+          const Divider(
+            color: Color.fromARGB(136, 255, 255, 255),
           ),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             height: 230,
             width: double.infinity,
-            child: Column(
+            child: const Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Row(
@@ -251,8 +251,8 @@ class _LibrarypageState extends State<Librarypage> {
               ],
             ),
           ),
-          Divider(
-            color: const Color.fromARGB(151, 255, 255, 255),
+          const Divider(
+            color: Color.fromARGB(151, 255, 255, 255),
           ),
         ],
       ),

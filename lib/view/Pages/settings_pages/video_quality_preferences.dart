@@ -25,10 +25,10 @@ class _VideoqualityPageState extends State<VideoqualityPage> {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 10),
           child: Text(
             "Select your default streaming quality for all videos. You can change streaming quality in player options for single videos.",
             maxLines: 4,
@@ -39,11 +39,11 @@ class _VideoqualityPageState extends State<VideoqualityPage> {
             ),
           ),
         ),
-        Divider(
+        const Divider(
           color: Colors.grey,
         ),
         buildListView('VIDEO QUALITY ON MOBILE NETWORKS', selectedOptionMobile),
-        Divider(
+        const Divider(
           color: Colors.grey,
         ),
         buildListView('VIDEO QUALITY ON WI-FI', selectedOptionWiFi),
@@ -59,7 +59,7 @@ class _VideoqualityPageState extends State<VideoqualityPage> {
           padding: const EdgeInsets.all(8.0),
           child: Text(
             heading,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
               color: Colors.white,
@@ -67,25 +67,25 @@ class _VideoqualityPageState extends State<VideoqualityPage> {
           ),
         ),
         ListView.builder(
-          physics: NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           itemCount: titleText.length,
           shrinkWrap: true,
           itemBuilder: (context, index) {
             return ListTile(
               title: Text(
                 titleText[index],
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
               ),
               subtitle: Text(
                 subtitleText[index],
-                style: TextStyle(
-                  color: const Color.fromARGB(255, 179, 178, 178),
+                style: const TextStyle(
+                  color: Color.fromARGB(255, 179, 178, 178),
                 ),
               ),
               trailing: Radio(
                 fillColor: selectedOption == index
-                    ? MaterialStatePropertyAll(Colors.blue)
-                    : MaterialStatePropertyAll(Colors.grey),
+                    ? const MaterialStatePropertyAll(Colors.blue)
+                    : const MaterialStatePropertyAll(Colors.grey),
                 activeColor: Colors.blue,
                 value: index,
                 groupValue: selectedOption,
